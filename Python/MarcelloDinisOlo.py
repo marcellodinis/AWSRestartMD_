@@ -49,7 +49,7 @@ elif menuOpt == 2:
     print("Quartos disponiveis...")
 
 else:
-    print("Operação inválida. Escolha opção 1 ou 2.")
+    print("Operação inválida. Escolha opção 1 ou 2.") #
 
 
 
