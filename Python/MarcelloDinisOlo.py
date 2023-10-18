@@ -35,7 +35,7 @@ if menuOpt == 1:
 
 
     if roomDays >=1 and roomDays <=365:
-        print("O quarto esteve alugado", roomDays, "dias.")
+        print("O quarto esteve reservado", roomDays, "dias.")
     else:
         print("O intervalo de dias deve ser entre 1 e 365.")
         exit()
