@@ -11,9 +11,10 @@ print("1. Contabilidade\n2. Quartos disponiveis\n \nDigite 1 ou 2 para a opção
 menuOpt = int(input())
 
 #Caso o utilizador escolha a opção 1: Contabilidade. opção 2: Quartos disponiveis. Qualquer outra opção é inválida
-
 #Ciclo no caso de o utilizador escolher a opção 1(Contabilidade):
 #Menu de opção com quatro opções: Individual, duplo, triplo e suite. Qualquer escolha fora deste range é inválida.
+#Menu redundante. O utilizador pode selecionar o quarto pretendido com maiúscula ou minúscula.
+
 if menuOpt == 1:
     print("Contabilidade...\n")
     print("**************** Contabilidade ****************")
@@ -34,22 +35,52 @@ if menuOpt == 1:
     roomDays = int(input("\nQuantos dias esteve o quarto reservado?\n"))
 
 
-    if roomDays >=1 and roomDays <=365:
-        print("O quarto esteve reservado", roomDays, "dias.")
-    else:
+#Condição genérica para confirmar se o input do utilizador é válido.
+if roomDays >=1 and roomDays <=365:
+        print("\n► O quarto esteve reservado", roomDays, "dias.\n")
+else:
         print("O intervalo de dias deve ser entre 1 e 365.")
         exit()
 
+
+
+#Lógica para tipo de quarto individual (Diária: 200€ | Limpeza: 15€ dia | Tributação variável 23/25/28%)
+
+if roomType == "I" or roomType == "i":
+        dailyCostI = (roomDays * 200) # var dailyCost multiplica com a taxa fixa de 200€/dia para obter valor total
+        tidyCostI = (roomDays * 15) # var tidyCostI multiplica com a taxa fixa de 15€/dia que deve subtrair ao valor total.
+        
+        if (dailyCostI <= 20000):
+                        taxCostI = (dailyCostI * 0.23) # até 20.000€ var taxCostI multiplica com 0.23(23%) para obter valor de tributação.
+                        print("● Rendeu um valor bruto de", dailyCostI,"€.")
+                        print("● O valor total com a limpeza foi de", tidyCostI,"€.")
+                        print("● É entregue ao estado", taxCostI,"€.")  
+                        print("● Lucro total:", dailyCostI - tidyCostI - taxCostI,"€.\n")
+
+        if (dailyCostI > 20000 and dailyCostI <= 50000):
+                        taxCostI = (dailyCostI * 0.25)
+                        print(dailyCostI)
+                        print(tidyCostI)
+                        print(taxCostI)  
+                        print(dailyCostI - tidyCostI - taxCostI)
+
+        if (dailyCostI > 50000):
+                        taxCostI = (dailyCostI * 0.28)
+                        print(dailyCostI)
+                        print(tidyCostI)
+                        print(taxCostI)  
+                        print(dailyCostI - tidyCostI - taxCostI)
+  
 
 
 
 
 #Ciclo no caso de o utilizador escolher a opção 2:
 elif menuOpt == 2:
-    print("Quartos disponiveis...")
+                print("Quartos disponiveis...")
 
 else:
-    print("Operação inválida. Escolha opção 1 ou 2.") #
+                print("Operação inválida. Escolha opção 1 ou 2.") #
 
 
 
