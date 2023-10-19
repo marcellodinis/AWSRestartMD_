@@ -162,7 +162,7 @@ if menuOpt == 1:
 
 
 
-#Ciclo no caso de o utilizador escolher a opção 2. Mostrar quartos vagos (números primos)
+#Ciclo no caso de o utilizador escolher a opção 2. Mostrar quartos vagos (números primos, falta fórmula)
 elif menuOpt == 2:
                 print("\n► Quartos disponiveis...")
 
