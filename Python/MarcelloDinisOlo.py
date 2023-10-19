@@ -45,7 +45,6 @@ else:
 
 
 #Lógica para tipo de quarto individual (Diária: 200€ | Limpeza: 15€ dia | Tributação variável 23/25/28%)
-
 if roomType == "I" or roomType == "i":
         dailyCostI = (roomDays * 200) # var dailyCost multiplica com a taxa fixa de 200€/dia para obter valor total
         tidyCostI = (roomDays * 15) # var tidyCostI multiplica com a taxa fixa de 15€/dia que deve subtrair ao valor total.
@@ -72,6 +71,85 @@ if roomType == "I" or roomType == "i":
                         print(dailyCostI - tidyCostI - taxCostI)
   
 
+#Lógica para tipo de quarto duplo (Diária: 250€ | Limpeza: 20€ dia | Tributação variável 23/25/28%)
+if roomType == "D" or roomType == "d":
+        dailyCostI = (roomDays * 250) # var dailyCost multiplica com a taxa fixa de 250€/dia para obter valor total
+        tidyCostI = (roomDays * 20) # var tidyCostI multiplica com a taxa fixa de 20€/dia que deve subtrair ao valor total.
+        
+        if (dailyCostI <= 20000):
+                        taxCostI = (dailyCostI * 0.23) # até 20.000€ var taxCostI multiplica com 0.23(23%) para obter valor de tributação.
+                        print("● Rendeu um valor bruto de", dailyCostI,"€.")
+                        print("● O valor total com a limpeza foi de", tidyCostI,"€.")
+                        print("● É entregue ao estado", taxCostI,"€.")  
+                        print("● Lucro total:", dailyCostI - tidyCostI - taxCostI,"€.\n")
+
+        if (dailyCostI > 20000 and dailyCostI <= 50000):
+                        taxCostI = (dailyCostI * 0.25)
+                        print(dailyCostI)
+                        print(tidyCostI)
+                        print(taxCostI)  
+                        print(dailyCostI - tidyCostI - taxCostI)
+
+        if (dailyCostI > 50000):
+                        taxCostI = (dailyCostI * 0.28)
+                        print(dailyCostI)
+                        print(tidyCostI)
+                        print(taxCostI)  
+                        print(dailyCostI - tidyCostI - taxCostI)
+
+
+#Lógica para tipo de quarto triplo (Diária: 275€ | Limpeza: 20€ dia | Tributação variável 23/25/28%)
+if roomType == "T" or roomType == "t":
+        dailyCostI = (roomDays * 275) # var dailyCost multiplica com a taxa fixa de 275€/dia para obter valor total
+        tidyCostI = (roomDays * 20) # var tidyCostI multiplica com a taxa fixa de 20€/dia que deve subtrair ao valor total.
+        
+        if (dailyCostI <= 20000):
+                        taxCostI = (dailyCostI * 0.23) # até 20.000€ var taxCostI multiplica com 0.23(23%) para obter valor de tributação.
+                        print("● Rendeu um valor bruto de", dailyCostI,"€.")
+                        print("● O valor total com a limpeza foi de", tidyCostI,"€.")
+                        print("● É entregue ao estado", taxCostI,"€.")  
+                        print("● Lucro total:", dailyCostI - tidyCostI - taxCostI,"€.\n")
+
+        if (dailyCostI > 20000 and dailyCostI <= 50000):
+                        taxCostI = (dailyCostI * 0.25)
+                        print(dailyCostI)
+                        print(tidyCostI)
+                        print(taxCostI)  
+                        print(dailyCostI - tidyCostI - taxCostI)
+
+        if (dailyCostI > 50000):
+                        taxCostI = (dailyCostI * 0.28)
+                        print(dailyCostI)
+                        print(tidyCostI)
+                        print(taxCostI)  
+                        print(dailyCostI - tidyCostI - taxCostI)
+
+
+#Lógica para tipo de quarto suite (Diária: 350€ | Limpeza: 30€ dia | Tributação variável 23/25/28%)
+if roomType == "S" or roomType == "s":
+        dailyCostI = (roomDays * 350) # var dailyCost multiplica com a taxa fixa de 350€/dia para obter valor total
+        tidyCostI = (roomDays * 30) # var tidyCostI multiplica com a taxa fixa de 30€/dia que deve subtrair ao valor total.
+        
+        if (dailyCostI <= 20000):
+                        taxCostI = (dailyCostI * 0.23) # até 20.000€ var taxCostI multiplica com 0.23(23%) para obter valor de tributação.
+                        print("● Rendeu um valor bruto de", dailyCostI,"€.")
+                        print("● O valor total com a limpeza foi de", tidyCostI,"€.")
+                        print("● É entregue ao estado", taxCostI,"€.")  
+                        print("● Lucro total:", dailyCostI - tidyCostI - taxCostI,"€.\n")
+
+        if (dailyCostI > 20000 and dailyCostI <= 50000):
+                        taxCostI = (dailyCostI * 0.25)
+                        print(dailyCostI)
+                        print(tidyCostI)
+                        print(taxCostI)  
+                        print(dailyCostI - tidyCostI - taxCostI)
+
+        if (dailyCostI > 50000):
+                        taxCostI = (dailyCostI * 0.28)
+                        print(dailyCostI)
+                        print(tidyCostI)
+                        print(taxCostI)  
+                        print(dailyCostI - tidyCostI - taxCostI)
 
 
 
