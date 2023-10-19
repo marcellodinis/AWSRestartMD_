@@ -1,4 +1,4 @@
-#Mensagem de boas vindas ao utilizar.
+#Mensagem de boas vindas ao utilizador.
 
 print("**************** Sistema de reservas Hotel Notas Musicais ★★★★★ ****************")
 print("                                  Bem-vindo!                                    \n")
